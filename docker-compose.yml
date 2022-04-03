@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:14.1-alpine
+    stop_signal: SIGINT
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: img_share_api_development
+      POSTGRES_USER: img_share_api
+      POSTGRES_PASSWORD: img_share_api
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+  # web:
+  #   image: test
+  #   command: bundle exec rails s -b 0.0.0.0
+  #   ports:
+  #     - 3000:3000
+  #   environment:
+  #     # RAILS_ENV: development
+  #     RAILS_ENV: production
+  #     RAILS_SERVE_STATIC_FILES: 1
+
+volumes:
+  postgres:
+
+# docker-compose -f docker-compose.yml build
+# docker-compose -f docker-compose.yml up
+# docker-compose -f docker-compose.yml logs -tf
