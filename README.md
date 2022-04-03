@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+Simple self-hosted image hosting service with image api sharing. 
 
-* Ruby version
+* Rails 7
+* Postgres 14
 
-* System dependencies
+## Features
 
-* Configuration
 
-* Database creation
+## Development
 
-* Database initialization
+```
+docker-compose up -d
+bundle install
+bundle exec rails s
+```
 
-* How to run the test suite
+Go to the [Active Admin Panel](http://localhost:3000/admin)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Production
+### Docker compose
+### Kubernetes
 
-* Deployment instructions
 
-* ...
+
