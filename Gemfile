@@ -66,13 +66,16 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
+  # gem "capybara"
+  # gem "selenium-webdriver"
+  # gem "webdrivers"
 end
 
-gem 'activeadmin'
-gem 'draper'
-gem 'devise'
-gem 'pundit'
-gem 'sentry-rails'
+gem "activeadmin"
+gem "draper"
+gem "devise"
+gem "pundit"
+gem "sentry-rails"
+gem "httparty"
+gem "aws-sdk-s3"
+gem "hashid-rails", "~> 1.0"
