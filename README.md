@@ -2,7 +2,7 @@
 
 ## Description
 
-Simple self-hosted image hosting service with image api sharing. 
+Simple self-hosted image hosting service with image api sharing.
 
 * Rails 7
 * Postgres 14
@@ -15,6 +15,8 @@ Simple self-hosted image hosting service with image api sharing.
 ```
 docker-compose up -d
 bundle install
+bundle exec rails db:migrate
+bundle exec rails db:seed
 bundle exec rails s
 ```
 
