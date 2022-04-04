@@ -31,3 +31,7 @@ docker-compose exec web bundle exec rails db:seed
 
 
 
+### Tests
+```
+docker-compose exec web bundle exec rails db:create RAILS_ENV=test
+```
