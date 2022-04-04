@@ -26,7 +26,8 @@ COPY Gemfile /$app/Gemfile
 COPY Gemfile.lock /$app/Gemfile.lock
 RUN bundle install
 ADD . $app
-# RUN ls -1 tmp/cache/assets/*
+
+ARG RAILS_MASTER_KEY
 RUN bundle exec rake RAILS_ENV=production assets:precompile
 
 EXPOSE 3000
