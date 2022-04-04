@@ -23,11 +23,11 @@ default: &default
 
 development:
   <<: *default
-  database: img_share_api_development
-  username: img_share_api
-  password: img_share_api
-  host: localhost
-  port: 5432
+  database: <%= ENV.fetch("DB_NAME") { "img_share_api_development" } %>
+  username: <%= ENV.fetch("DB_USERNAME") { "img_share_api" } %>
+  password: <%= ENV.fetch("DB_PASSWORD") { "img_share_api" } %>
+  host: <%= ENV.fetch("DB_HOST") { "localhost" } %>
+  port: <%= ENV.fetch("DB_PORT") { 5432 } %>
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
